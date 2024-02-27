@@ -3,6 +3,8 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import animationData from "./images/Animation - 1709040981241.json";
+import Lottie from "react-lottie";
 // import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useContext, useState } from "react";
 import { Context } from "../Helpers/Helper";
@@ -46,7 +48,22 @@ function Talk() {
         <TextField id="standard-multiline-flexible" label="Message" multiline maxRows={10} variant="standard" />
         <TextField type="submit" />
       </Box>
-      <div>
+      <div className="text-black">
+        <div>
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: animationData,
+              rendererSettings: {
+                preserveAspectRatio: "xMidYMid slice",
+              },
+            }}
+            width={400}
+            height={400}
+          />
+          Let`s Talk:<span className="text-orange">+254740550484</span>
+        </div>
         Email:{" "}
         <a href="mailto:johanagikonyo552@gmail.com" className="text-orange-500">
           johanagikonyo552@gmail.com
