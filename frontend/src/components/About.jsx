@@ -106,56 +106,64 @@ function About() {
           </h1>
           <ul className="lg:flex flex-row gap-4 grid grid-cols-2">
             <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
-              HTML5
+              <p>HTML5</p>
+              <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
 
             <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded sm:flex-6 grid grid-cols-2">
-              CSS3{" "}
+              <p>CSS3 </p>
+              <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
             <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded sm:flex-6 grid grid-cols-2">
-              JavaSCript{" "}
+              <p>JavaSCript </p>
+              <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
             <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded  grid grid-cols-2">
-              React{" "}
+              <p>Node Js </p>
+              <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
             <li className="lg:flex flex-col items-center border border-blue-500  m-2 rounded grid grid-cols-2">
-              Tailwind{" "}
+              <p> Tailwind </p>
+              <br />
+              <span>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
+              </span>
+            </li>
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2 ">
+              <p>TypeScript</p> <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
             <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
-              TypeScript{" "}
+              <p>Node Js </p>
+              <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
             <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
-              Node Js{" "}
+              <p>EXpress </p>
+              <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
             <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
-              EXpress{" "}
-              <span>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
-              </span>
-            </li>
-            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
-              Mongo Db{" "}
+              <p>Mongo Db </p>
+              <br />
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
