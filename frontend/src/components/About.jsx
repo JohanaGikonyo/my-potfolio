@@ -104,57 +104,57 @@ function About() {
             </span>
             Skills
           </h1>
-          <ul className="flex lg:flex-row gap-4 overflow-x-auto  -webkit-scrollbar-none">
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+          <ul className="lg:flex flex-row gap-4 grid grid-cols-2">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
               HTML5
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
 
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded sm:flex-6 grid grid-cols-2">
               CSS3{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded sm:flex-6 grid grid-cols-2">
               JavaSCript{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded ">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded  grid grid-cols-2">
               React{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+            <li className="lg:flex flex-col items-center border border-blue-500  m-2 rounded grid grid-cols-2">
               Tailwind{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
               TypeScript{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
               Node Js{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
               EXpress{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
               </span>
             </li>
-            <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
+            <li className="lg:flex flex-col items-center border border-blue-500 p-3 m-2 rounded grid grid-cols-2">
               Mongo Db{" "}
               <span>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMUlEQVR4nO3RAQkAMAACQXPYv+cWYwzvwADyCQAAAACL2p4fF0f6vkInigAAAACw4AJR/O9Z5v9+rQAAAABJRU5ErkJggg==" />
