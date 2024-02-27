@@ -4,12 +4,14 @@ import InputAdornment from "@mui/material/InputAdornment";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 // import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Context } from "../Helpers/Helper";
 
 function Talk() {
   const [showPassword, setShowPassword] = useState(true);
+  const { changeMode } = useContext(Context);
   return (
-    <div>
+    <div className={`${changeMode ? "text-white bg-slate-200  p-0 rounded" : ""}`}>
       <Box
         component="form"
         sx={{
@@ -44,6 +46,12 @@ function Talk() {
         <TextField id="standard-multiline-flexible" label="Message" multiline maxRows={10} variant="standard" />
         <TextField type="submit" />
       </Box>
+      <div>
+        Email:{" "}
+        <a href="mailto:johanagikonyo552@gmail.com" className="text-orange-500">
+          johanagikonyo552@gmail.com
+        </a>
+      </div>
     </div>
   );
 }

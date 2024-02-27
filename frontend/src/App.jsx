@@ -8,12 +8,14 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import { Context } from "./Helpers/Helper";
 import { useState } from "react";
+
 function App() {
   const [changeMode, setChangeMode] = useState(false);
   return (
     <>
       <Context.Provider value={{ changeMode, setChangeMode }}>
         <Navigation />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

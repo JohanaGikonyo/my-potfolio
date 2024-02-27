@@ -38,7 +38,7 @@ function About() {
               <span className="text-orange-400 p-3">
                 <MailInlineIcon />
               </span>
-              johanagikonyo@gmail.com
+              <a href="mailto:johanagikonyo552@gmail.com">johanagikonyo@gmail.com</a>
             </li>
             <li className="flex flex-row items-center">
               <span className="text-orange-400 p-3 ">
@@ -56,13 +56,15 @@ function About() {
               <span className="text-orange-400 p-3">
                 <GitHubIcon />
               </span>
-              github.com/JohanaGikonyo
+              <a href="https://github.com/JohanaGikonyo"> github.com/JohanaGikonyo</a>
             </li>
             <li className="flex flex-row items-center">
               <span className="text-orange-400 p-3">
                 <LinkedInIcon />
               </span>
-              Johana Gikonyo
+              <a href="https://www.linkedin.com/in/johana-gikonyo-789118233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                Johana Gikonyo
+              </a>
             </li>
           </ul>
         </div>
@@ -102,7 +104,7 @@ function About() {
             </span>
             Skills
           </h1>
-          <ul className="flex lg:flex-row  gap-4 flex-col">
+          <ul className="flex lg:flex-row gap-4 overflow-x-auto  -webkit-scrollbar-none">
             <li className="flex flex-col items-center border border-blue-500 p-3 m-2 rounded">
               HTML5
               <span>

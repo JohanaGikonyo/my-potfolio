@@ -89,7 +89,7 @@ function Home() {
           className={`${
             changeMode
               ? "flex lg:flex-row gap-2 justify-around m-2  p-2 overflow-x-auto"
-              : "flex lg:flex-row gap-2 border justify-around m-2  p-2 overflow-x-auto"
+              : "flex lg:flex-row gap-2 border justify-around m-2  p-2 overflow-x-auto -webkit-scrollbar-none"
           }`}
         >
           {" "}
@@ -146,26 +146,78 @@ function Home() {
             <a href="https://jkelectronics.vercel.app/">
               <img src={img4} alt="" className="h-60 w-60  object-cover" />{" "}
             </a>{" "}
-            <p>An E-cormerce Website</p>
+            <p>
+              An E-cormerce Website{" "}
+              <span>
+                {" "}
+                <a href="https://jkelectronics.vercel.app/">
+                  <button className="border border-orange-400 p-1 rounded m-3">
+                    View{" "}
+                    <span className="text-blue-400">
+                      <ArrowForwardIcon />
+                    </span>
+                  </button>
+                </a>
+              </span>
+            </p>
           </div>
           <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
             <a href="https://clustercalculator.vercel.app/">
               <img src={img5} alt="" className="h-60 w- object-cover" />
             </a>{" "}
-            <p>A Cluster Points Calculator</p>
+            <p>
+              A Cluster Points Calculator{" "}
+              <span>
+                {" "}
+                <a href="https://clustercalculator.vercel.app/">
+                  <button className="border border-orange-400 p-1 rounded m-3">
+                    View{" "}
+                    <span className="text-blue-400">
+                      <ArrowForwardIcon />
+                    </span>
+                  </button>
+                </a>
+              </span>
+            </p>
           </div>
           <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
             <a href="https://survayorsdocuments.vercel.app/">
               <img src={img6} alt="" className="h-60 w-60 object-cover" />
             </a>{" "}
-            <p>A Quantity Surveyor`s Website</p>{" "}
+            <p>
+              A Quantity Surveyor`s Website{" "}
+              <span>
+                {" "}
+                <a href="https://survayorsdocuments.vercel.app/">
+                  <button className="border border-orange-400 p-1 rounded m-3">
+                    View{" "}
+                    <span className="text-blue-400">
+                      <ArrowForwardIcon />
+                    </span>
+                  </button>
+                </a>
+              </span>
+            </p>{" "}
           </div>
           <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
             <a href="https://shoppfyapp.vercel.app/">
               {" "}
               <img src={img7} alt="" className="h-60 w-60 object-cover" />
             </a>
-            <p>A Fabric Calculator for Shopify Users</p>
+            <p>
+              A Fabric Calculator for Shopify Users{" "}
+              <span>
+                {" "}
+                <a href="https://shoppfyapp.vercel.app/">
+                  <button className="border border-orange-400 p-1 rounded m-3">
+                    View{" "}
+                    <span className="text-blue-400">
+                      <ArrowForwardIcon />
+                    </span>
+                  </button>
+                </a>
+              </span>
+            </p>
           </div>
         </div>
         <button className="border rounded border-t-orange-500 p-3 ">
