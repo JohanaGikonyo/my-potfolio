@@ -6,12 +6,16 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import animationData from "./images/Animation - 1709040981241.json";
 import Lottie from "react-lottie";
 // import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Context } from "../Helpers/Helper";
 
 function Talk() {
   const [showPassword, setShowPassword] = useState(true);
   const { changeMode } = useContext(Context);
+  useEffect(() => {
+    // Scroll to the top when the pathname changes
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={`${changeMode ? "text-white bg-slate-200  p-0 rounded" : ""}`}>
       <Box

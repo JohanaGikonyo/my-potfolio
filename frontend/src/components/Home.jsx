@@ -5,18 +5,37 @@ import img5 from "./images/computer3.jpg";
 import img6 from "./images/computer4.jpg";
 import img7 from "./images/code1.jpg";
 import img8 from "./images/johana1.jpeg";
+import animationData from "./images/Animation3.json";
+import Lottie from "react-lottie";
 import { BiRightArrow, BiSolidQuoteSingleLeft } from "react-icons/bi";
 import { BiSolidQuoteSingleRight } from "react-icons/bi";
 import { BiLeftArrow } from "react-icons/bi";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../Helpers/Helper";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   const { changeMode } = useContext(Context);
+  useEffect(() => {
+    // Scroll to the top when the pathname changes
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <section className="flex flex-col lg:flex-row justify-around border border-collapse items-center">
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: animationData,
+            rendererSettings: {
+              preserveAspectRatio: "xMidYMid slice",
+            },
+          }}
+          width={400}
+          height={400}
+        />
         <div className="flex flex-col items-center lg:w-1/2">
           <h5 className="text-blue text-2xl italic">
             Johana Gikonyo Kihiu
@@ -25,12 +44,14 @@ function Home() {
           </h5>
           <div>
             <h6>A passionate Web Developer</h6>
-            <button className="border border-orange-400 p-1 rounded m-3">
-              Learn More{" "}
-              <span className="text-blue-400">
-                <ArrowForwardIcon />
-              </span>
-            </button>
+            <NavLink to="/about">
+              <button className="border border-orange-400 p-1 rounded m-3">
+                Learn More{" "}
+                <span className="text-blue-400">
+                  <ArrowForwardIcon />
+                </span>
+              </button>
+            </NavLink>
           </div>
         </div>
         <div
@@ -40,6 +61,7 @@ function Home() {
               : "border text-center p-5 lg:w-1/2 flex flex-col items-center"
           }`}
         >
+          {" "}
           <img src={img2} alt="" className="w-60 h-60 object-cover rounded" />
         </div>
       </section>
@@ -59,26 +81,29 @@ function Home() {
             About <span className="text-orange-500">Me</span>
           </button>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem molestias, perferendis eaque
-            voluptatibus pariatur, id commodi architecto deleniti, sit numquam culpa quo veritatis laborum asperiores et
-            consectetur dolores impedit praesentium?
+            A motivated, adaptable and responsible Software Developer with different required skills in software
+            Development seeking an IT position which will utilize technical skills developed through past experience in
+            this field. I have a methodical, customer-focused approach to work and a strong drive to see things through
+            to completion. In my career journey, I have managed to create different business marketing softwares for
+            different organizations.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus dolorem sunt dolores aspernatur illo quaerat
-            eveniet impedit nesciunt, consequuntur atque assumenda hic eius nam quisquam sint, doloremque voluptatum?
-            Quia, unde?
+            I Acqured a bachelor`s degree in Mathematics And Computer Science at MultiMedia University Of Kenya. I am a
+            learned person looking forward to implementing my great knowledge and skills towards impacting the entire
+            society positively.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsa dolore perferendis tenetur alias
-            tempore similique omnis commodi illum quo excepturi fuga repellendus, recusandae, quisquam ipsam et quas sit
-            optio?
+            I`m also much collaborative and ready to work together with different teams in teh development field, and
+            also interacting with people around the society, to learn and understand their needs.
           </p>
-          <button className="border border-orange-500 p-1 rounded m-4">
-            Learn <span className="text-orange-500">More</span>
-            <span className="text-blue-500">
-              <ArrowForwardIcon />
-            </span>
-          </button>
+          <NavLink to="/about">
+            <button className="border border-orange-500 p-1 rounded m-4">
+              Learn <span className="text-orange-500">More</span>
+              <span className="text-blue-500">
+                <ArrowForwardIcon />
+              </span>
+            </button>
+          </NavLink>
         </div>
       </section>
       <section>
@@ -147,7 +172,8 @@ function Home() {
               <img src={img4} alt="" className="h-60 w-60  object-cover" />{" "}
             </a>{" "}
             <p>
-              An E-cormerce Website{" "}
+              <p>An E-cormerce Website </p>
+              <br />
               <span>
                 {" "}
                 <a href="https://jkelectronics.vercel.app/">
@@ -166,7 +192,8 @@ function Home() {
               <img src={img5} alt="" className="h-60 w- object-cover" />
             </a>{" "}
             <p>
-              A Cluster Points Calculator{" "}
+              <p>A Cluster Points Calculator </p>
+              <br />
               <span>
                 {" "}
                 <a href="https://clustercalculator.vercel.app/">
@@ -185,7 +212,8 @@ function Home() {
               <img src={img6} alt="" className="h-60 w-60 object-cover" />
             </a>{" "}
             <p>
-              A Quantity Surveyor`s Website{" "}
+              <p>A Quantity Surveyor`s Website </p>
+              <br />
               <span>
                 {" "}
                 <a href="https://survayorsdocuments.vercel.app/">
@@ -205,7 +233,8 @@ function Home() {
               <img src={img7} alt="" className="h-60 w-60 object-cover" />
             </a>
             <p>
-              A Fabric Calculator for Shopify Users{" "}
+              <p>A Fabric Calculator for Shopify Users </p>
+              <br />
               <span>
                 {" "}
                 <a href="https://shoppfyapp.vercel.app/">

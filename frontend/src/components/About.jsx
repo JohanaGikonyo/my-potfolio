@@ -7,12 +7,33 @@ import PhoneCallbackOutlinedIcon from "@mui/icons-material/PhoneCallbackOutlined
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import CheckCircleOutlineRoundedIcon from "@mui/icons-material/CheckCircleOutlineRounded";
 import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
-import { useContext } from "react";
+import animationData from "./images/Animation2.json";
+import Lottie from "react-lottie";
+import { useContext, useEffect } from "react";
 import { Context } from "../Helpers/Helper";
 function About() {
   const { changeMode } = useContext(Context);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={`${changeMode ? "text-white p-2" : "text- p-2"}`}>
+      {" "}
+      <div className="flex items-center p-3 m-4 border rounded">
+        {" "}
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: animationData,
+            rendererSettings: {
+              preserveAspectRatio: "xMidYMid slice",
+            },
+          }}
+          width={400}
+          height={400}
+        />
+      </div>
       <div className="flex  flex-col lg:flex-row   border text-black justify-evenly">
         <div
           className={`${
@@ -25,11 +46,11 @@ function About() {
           <h1 className="text-2xl font-thin">Johana Kihiu</h1>
           <h4 className="text-orange-400">Junior Web Developer</h4>
           <p className="text-2xl font-sanrif ">
-            Innovative, task-driven professional with 2 years of experience in Web Design and development across diverse
-            industries . Equipedwith a record of successin consistency and provinding the technological needs of
-            companies through ingenouis innovation. Proficient in developing Web Applications, creating user interfaces,
-            writting and testing codes, troubleshooting simple/complex issues, and implementating new features based on
-            user feedback.
+            Innovative, task-driven professional with more than 2 years of experience in Web Design and development
+            across diverse industries . Equipedwith a record of successin consistency and provinding the technological
+            needs of companies through ingenouis innovation. Proficient in developing Web Applications, creating user
+            interfaces, writting and testing codes, troubleshooting simple/complex issues, and implementating new
+            features based on user feedback.
           </p>
         </div>
         <div className="flex flex-col items-center  justify-evenly m-5">
