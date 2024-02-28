@@ -43,7 +43,7 @@ function Navigation() {
           <div
             className={`${
               menuOpen
-                ? "flex bg-black text-white absolute z-20 top-20 right-0  rounded p-5 transition ease-in-out duration-700 transform "
+                ? "flex bg-black text-white absolute z-20 top-0 right-0  rounded p-5 transition ease-in-out duration-700 transform "
                 : ""
             }`}
           >
