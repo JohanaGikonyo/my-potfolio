@@ -6,6 +6,8 @@ import img6 from "./images/computer4.jpg";
 import img7 from "./images/code1.jpg";
 import img8 from "./images/johana1.jpeg";
 import animationData from "./images/Animation3.json";
+import animationdownload from "./images/download.json";
+
 import Lottie from "react-lottie";
 import { BiRightArrow, BiSolidQuoteSingleLeft } from "react-icons/bi";
 import { BiSolidQuoteSingleRight } from "react-icons/bi";
@@ -14,6 +16,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useContext, useEffect } from "react";
 import { Context } from "../Helpers/Helper";
 import { NavLink } from "react-router-dom";
+import pdf from "./images/cv.pdf";
 
 function Home() {
   const { changeMode } = useContext(Context);
@@ -33,8 +36,8 @@ function Home() {
               preserveAspectRatio: "xMidYMid slice",
             },
           }}
-          width={400}
-          height={400}
+          width={200}
+          height={200}
         />
         <div className="flex flex-col items-center lg:w-1/2">
           <h5 className="text-blue text-2xl italic">
@@ -44,6 +47,26 @@ function Home() {
           </h5>
           <div>
             <h6>A passionate Web Developer</h6>
+            <a href={pdf} download="Johana cv.pdf">
+              <button className="p-2 m-3 border rounded ">
+                Download CV{" "}
+                <span>
+                  {" "}
+                  <Lottie
+                    options={{
+                      loop: true,
+                      autoplay: true,
+                      animationData: animationdownload,
+                      rendererSettings: {
+                        preserveAspectRatio: "xMidYMid slice",
+                      },
+                    }}
+                    width={50}
+                    height={50}
+                  />
+                </span>
+              </button>
+            </a>
             <NavLink to="/about">
               <button className="border border-orange-400 p-1 rounded m-3">
                 Learn More{" "}
