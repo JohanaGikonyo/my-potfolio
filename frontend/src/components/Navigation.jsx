@@ -3,9 +3,13 @@ import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import NightsStayOutlinedIcon from "@mui/icons-material/NightsStayOutlined";
 import { useEffect, useContext } from "react";
 import img3 from "./images/logo.jpg";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { Context } from "../Helpers/Helper";
+import { useState } from "react";
 function Navigation() {
   const { changeMode, setChangeMode } = useContext(Context);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     if (changeMode) {
       document.body.style.backgroundColor = "black";
@@ -17,7 +21,7 @@ function Navigation() {
   }, [changeMode]);
 
   return (
-    <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"}`}>
+    <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"} relative`}>
       <div className="flex flex-row justify-between p-1 m-2 items-center ">
         <div className="text-orange-400 italic font-thin text-5xl">
           <NavLink to="/">
@@ -36,35 +40,57 @@ function Navigation() {
           ) : (
             <WbSunnyOutlinedIcon onClick={() => setChangeMode((prev) => !prev)} />
           )}
-
-          <NavLink
-            to="/"
-            className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+          <div
+            className={`${
+              menuOpen
+                ? "flex bg-black text-white absolute z-20 top-20 right-0  rounded p-5 transition ease-in-out duration-700 transform "
+                : ""
+            }`}
           >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/work"
-            className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
-          >
-            {" "}
-            Work
-          </NavLink>
-          <button className="bg-orange-500 text-white text-center p-1 rounded">
-            <NavLink
-              to="/talk"
-              className="transition duration-500 ease-in-out transform hover:sp hover:text-white hover:scale-90 "
-            >
-              Let`s Talk
-            </NavLink>
-          </button>
-        </div>
+            <div className={`${menuOpen ? "flex flex-col gap-5" : "hidden"} lg:flex lg:flex-row lg:gap-1`}>
+              <NavLink
+                to="/"
+                className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/work"
+                className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+              >
+                {" "}
+                Work
+              </NavLink>
+              <button className="bg-orange-500 text-white text-center p-1 rounded">
+                <NavLink
+                  to="/talk"
+                  className="transition duration-500 ease-in-out transform hover:sp hover:text-white hover:scale-90 "
+                >
+                  Let`s Talk
+                </NavLink>
+              </button>
+            </div>
+            {menuOpen ? (
+              <CloseIcon
+                onClick={() => {
+                  setMenuOpen((prev) => !prev);
+                }}
+              />
+            ) : (
+              <MenuIcon
+                onClick={() => {
+                  setMenuOpen((prev) => !prev);
+                }}
+              />
+            )}{" "}
+          </div>
+        </div>{" "}
       </div>
     </div>
   );
