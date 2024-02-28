@@ -27,7 +27,7 @@ function Home() {
 
     const countNumbers = setInterval(() => {
       numbers >= 300 ? "" : setNumbers(numbers + 1);
-    }, [1]);
+    }, [0.5]);
     return () => clearInterval(countNumbers);
   }, [numbers]);
   return (
