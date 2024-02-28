@@ -22,11 +22,11 @@ function Work() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="m-10 tetx-white">
+    <div className="m-7 tetx-white">
       <Slider {...settings} className="">
         <div>
           {" "}
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around flex-wrap gap-2">
+          <div className="flex flex-col border p-3 m-2 rounded items-center justify-around flex-wrap gap-2 hover:bg-slate-900 hover:text-white ">
             <a href="https://jkelectronics.vercel.app/">
               <img src={img4} alt="" className="h-60 w-60  object-cover" />{" "}
             </a>{" "}
@@ -36,7 +36,7 @@ function Work() {
               <span>
                 {" "}
                 <a href="https://jkelectronics.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -48,9 +48,9 @@ function Work() {
           </div>
         </div>
         <div>
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
+          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2 hover:bg-slate-900 hover:text-white ">
             <a href="https://clustercalculator.vercel.app/">
-              <img src={img5} alt="" className="h-60 w- object-cover" />
+              <img src={img5} alt="" className="h-60 w-60 object-cover" />
             </a>{" "}
             <p>
               <p>A Cluster Points Calculator </p>
@@ -58,7 +58,7 @@ function Work() {
               <span>
                 {" "}
                 <a href="https://clustercalculator.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -80,7 +80,7 @@ function Work() {
               <span>
                 {" "}
                 <a href="https://survayorsdocuments.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -92,7 +92,7 @@ function Work() {
           </div>
         </div>
         <div>
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
+          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2 hover:bg-slate-900 hover:text-white ">
             <a href="https://shoppfyapp.vercel.app/">
               {" "}
               <img src={img7} alt="" className="h-60 w-60 object-cover" />
@@ -103,7 +103,7 @@ function Work() {
               <span>
                 {" "}
                 <a href="https://shoppfyapp.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -115,9 +115,9 @@ function Work() {
           </div>
         </div>
         <div>
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
+          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2 hover:bg-slate-900 hover:text-white ">
             <a href="https://clustercalculator.vercel.app/">
-              <img src={img5} alt="" className="h-60 w- object-cover" />
+              <img src={img5} alt="" className="w-60 h-60 object-cover" />
             </a>{" "}
             <p>
               <p>A Cluster Points Calculator </p>
@@ -125,7 +125,7 @@ function Work() {
               <span>
                 {" "}
                 <a href="https://clustercalculator.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -137,7 +137,7 @@ function Work() {
           </div>
         </div>
         <div>
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
+          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2 hover:bg-slate-900 hover:text-white ">
             <a href="https://shoppfyapp.vercel.app/">
               {" "}
               <img src={img7} alt="" className="h-60 w-60 object-cover" />
@@ -148,7 +148,7 @@ function Work() {
               <span>
                 {" "}
                 <a href="https://shoppfyapp.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />

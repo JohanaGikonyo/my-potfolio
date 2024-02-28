@@ -18,7 +18,7 @@ function Navigation() {
 
   return (
     <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"}`}>
-      <div className="flex flex-row justify-between p-1 m-2 items-center  ">
+      <div className="flex flex-row justify-between p-1 m-2 items-center ">
         <div className="text-orange-400 italic font-thin text-5xl">
           <NavLink to="/">
             <h5 className="flex">
@@ -37,11 +37,32 @@ function Navigation() {
             <WbSunnyOutlinedIcon onClick={() => setChangeMode((prev) => !prev)} />
           )}
 
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/work">Work</NavLink>
+          <NavLink
+            to="/"
+            className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/work"
+            className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+          >
+            {" "}
+            Work
+          </NavLink>
           <button className="bg-orange-500 text-white text-center p-1 rounded">
-            <NavLink to="/talk">Let`s Talk</NavLink>
+            <NavLink
+              to="/talk"
+              className="transition duration-500 ease-in-out transform hover:sp hover:text-white hover:scale-90 "
+            >
+              Let`s Talk
+            </NavLink>
           </button>
         </div>
       </div>

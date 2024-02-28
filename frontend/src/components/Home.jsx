@@ -13,17 +13,23 @@ import { BiRightArrow, BiSolidQuoteSingleLeft } from "react-icons/bi";
 import { BiSolidQuoteSingleRight } from "react-icons/bi";
 import { BiLeftArrow } from "react-icons/bi";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../Helpers/Helper";
 import { NavLink } from "react-router-dom";
 import pdf from "./images/cv.pdf";
 
 function Home() {
   const { changeMode } = useContext(Context);
+  const [numbers, setNumbers] = useState(0);
   useEffect(() => {
     // Scroll to the top when the pathname changes
     window.scrollTo(0, 0);
-  }, []);
+
+    const countNumbers = setInterval(() => {
+      numbers >= 300 ? "" : setNumbers(numbers + 1);
+    }, [1]);
+    return () => clearInterval(countNumbers);
+  }, [numbers]);
   return (
     <div>
       <section className="flex flex-col lg:flex-row justify-around border border-collapse items-center">
@@ -45,10 +51,13 @@ function Home() {
             <br />
             <span className="p-3 text-sm text-orange-400 m-5">Website Developer Developer</span>
           </h5>
-          <div>
-            <h6>A passionate Web Developer</h6>
+          <h6>A passionate Web Developer</h6>
+          <div className="flex flex-row">
             <a href={pdf} download="Johana cv.pdf">
-              <button className="p-2 m-3 border rounded ">
+              <button
+                className="p-2 m-3 border rounded transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white
+            hover:scale-90"
+              >
                 Download CV{" "}
                 <span>
                   {" "}
@@ -67,14 +76,19 @@ function Home() {
                 </span>
               </button>
             </a>
-            <NavLink to="/about">
-              <button className="border border-orange-400 p-1 rounded m-3">
-                Learn More{" "}
-                <span className="text-blue-400">
-                  <ArrowForwardIcon />
-                </span>
+            <span className="flex flex-col items-center">
+              <button className="btn">
+                <h1 className=" font-bold text-3xl">{numbers}+</h1>
               </button>
-            </NavLink>
+              <NavLink to="/about">
+                <button className="border border-orange-400 p-1 rounded m-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
+                  Learn More{" "}
+                  <span className="text-blue-400">
+                    <ArrowForwardIcon />
+                  </span>
+                </button>
+              </NavLink>
+            </span>
           </div>
         </div>
         <div
@@ -95,11 +109,17 @@ function Home() {
             : "flex flex-col lg:flex-row items-center border justify-between  m-3 p-2"
         }`}
       >
-        <div className="bg-blue-500 flex flex-col items-center justify-evenly rounded lg:w-1/2 m-2 text-white text-xl">
+        <div
+          className="bg-blue-500 flex flex-col items-center justify-evenly rounded lg:w-1/2 m-2 text-white text-xl transition duration-500 ease-in-out transform hover:bg-slate-800 hover:text-white
+            hover:scale-110"
+        >
           <img src={img3} alt="" className="w-60 h-60 rounded m-3 object-cover" />
           <h3>3+ Years of Experience</h3>
         </div>
-        <div className="flex flex-col items-center lg:w-1/2 m-2">
+        <div
+          className="flex flex-col items-center lg:w-1/2 m-2 transition duration-500 ease-in-out transform hover:bg-slate-800 hover:text-white
+            hover:scale-90 p-3"
+        >
           <button className="overline">
             About <span className="text-orange-500">Me</span>
           </button>
@@ -120,8 +140,8 @@ function Home() {
             also interacting with people around the society, to learn and understand their needs.
           </p>
           <NavLink to="/about">
-            <button className="border border-orange-500 p-1 rounded m-4">
-              Learn <span className="text-orange-500">More</span>
+            <button className="border border-orange-500 p-1 rounded m-4 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
+              Learn <span className="text-orange-500 hover:text-white">More</span>
               <span className="text-blue-500">
                 <ArrowForwardIcon />
               </span>
@@ -190,7 +210,10 @@ function Home() {
           </h3>
         </div>
         <div className="flex lg:flex-row gap-2 rounded p-2 m-3 flex-wrap">
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around flex-wrap gap-2">
+          <div
+            className="flex flex-col border p-2 m-2 rounded items-center justify-around flex-wrap gap-2 transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+            hover:scale-90 "
+          >
             <a href="https://jkelectronics.vercel.app/">
               <img src={img4} alt="" className="h-60 w-60  object-cover" />{" "}
             </a>{" "}
@@ -200,7 +223,7 @@ function Home() {
               <span>
                 {" "}
                 <a href="https://jkelectronics.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -210,9 +233,12 @@ function Home() {
               </span>
             </p>
           </div>
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
+          <div
+            className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+            hover:scale-90"
+          >
             <a href="https://clustercalculator.vercel.app/">
-              <img src={img5} alt="" className="h-60 w- object-cover" />
+              <img src={img5} alt="" className="h-60 w-60 object-cover" />
             </a>{" "}
             <p>
               <p>A Cluster Points Calculator </p>
@@ -220,7 +246,7 @@ function Home() {
               <span>
                 {" "}
                 <a href="https://clustercalculator.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -230,7 +256,10 @@ function Home() {
               </span>
             </p>
           </div>
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
+          <div
+            className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+            hover:scale-90"
+          >
             <a href="https://survayorsdocuments.vercel.app/">
               <img src={img6} alt="" className="h-60 w-60 object-cover" />
             </a>{" "}
@@ -240,7 +269,7 @@ function Home() {
               <span>
                 {" "}
                 <a href="https://survayorsdocuments.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -250,7 +279,10 @@ function Home() {
               </span>
             </p>{" "}
           </div>
-          <div className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2">
+          <div
+            className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+            hover:scale-90"
+          >
             <a href="https://shoppfyapp.vercel.app/">
               {" "}
               <img src={img7} alt="" className="h-60 w-60 object-cover" />
@@ -261,7 +293,7 @@ function Home() {
               <span>
                 {" "}
                 <a href="https://shoppfyapp.vercel.app/">
-                  <button className="border border-orange-400 p-1 rounded m-3">
+                  <button className="border border-orange-400 p-1 rounded m-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                     View{" "}
                     <span className="text-blue-400">
                       <ArrowForwardIcon />
@@ -272,7 +304,7 @@ function Home() {
             </p>
           </div>
         </div>
-        <button className="border rounded border-t-orange-500 p-3 ">
+        <button className="border rounded border-t-orange-500 p-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
           See{" "}
           <span className="text-orange-400 ">
             More <ArrowForwardIcon />
