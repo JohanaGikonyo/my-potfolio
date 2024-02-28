@@ -19,3 +19,10 @@ body {
   background-color: white;
   color: black;
 }
+
+.active {
+  background-color: rgb(236, 97, 46);
+  /* Change to your desired active background color */
+  color: white;
+  padding: 3px;
+}

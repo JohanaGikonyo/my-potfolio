@@ -10,6 +10,7 @@ import { useState } from "react";
 function Navigation() {
   const { changeMode, setChangeMode } = useContext(Context);
   const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     if (changeMode) {
       document.body.style.backgroundColor = "black";
@@ -24,15 +25,13 @@ function Navigation() {
     <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"} relative z-50`}>
       <div className="flex flex-row justify-between p-1 m-2 items-center ">
         <div className="text-orange-400 italic font-thin text-5xl">
-          <NavLink to="/">
-            <h5 className="flex">
-              <span>
-                {" "}
-                <img src={img3} alt="" className="w-10 h-10 object-cover rounded-[50%]" />
-              </span>
-              JG KIHIU
-            </h5>
-          </NavLink>
+          <h5 className="flex">
+            <span>
+              {" "}
+              <img src={img3} alt="" className="w-10 h-10 object-cover rounded-[50%]" />
+            </span>
+            JG KIHIU
+          </h5>
         </div>
         <div className="flex gap-3 flex-row justify-between">
           {changeMode ? (
@@ -50,28 +49,20 @@ function Navigation() {
             <div className={`${menuOpen ? "flex flex-col gap-5" : "hidden"} lg:flex lg:flex-row lg:gap-5`}>
               <NavLink
                 to="/"
-                className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
+                className="transition duration-500 ease-in-out transform     rounded "
+                activeClassName="active"
               >
                 Home
               </NavLink>
-              <NavLink
-                to="/about"
-                className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
-              >
+              <NavLink to="/about" className="transition duration-500 ease-in-out transform     rounded">
                 About
               </NavLink>
-              <NavLink
-                to="/work"
-                className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
-              >
+              <NavLink to="/work" className="transition duration-500 ease-in-out transform     rounded">
                 {" "}
                 Work
               </NavLink>
-              <button className="bg-orange-500 text-white text-center p-1 rounded">
-                <NavLink
-                  to="/talk"
-                  className="transition duration-500 ease-in-out transform hover:sp hover:text-white hover:scale-90 "
-                >
+              <button className=" text-center p-1 rounded">
+                <NavLink to="/talk" className="transition duration-500 ease-in-out transform rounded p-2 ">
                   Let`s Talk
                 </NavLink>
               </button>
