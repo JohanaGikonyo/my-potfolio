@@ -21,7 +21,7 @@ function Navigation() {
   }, [changeMode]);
 
   return (
-    <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"} relative`}>
+    <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"} relative z-50`}>
       <div className="flex flex-row justify-between p-1 m-2 items-center ">
         <div className="text-orange-400 italic font-thin text-5xl">
           <NavLink to="/">
@@ -47,7 +47,7 @@ function Navigation() {
                 : ""
             }`}
           >
-            <div className={`${menuOpen ? "flex flex-col gap-5" : "hidden"} lg:flex lg:flex-row lg:gap-1`}>
+            <div className={`${menuOpen ? "flex flex-col gap-5" : "hidden"} lg:flex lg:flex-row lg:gap-5`}>
               <NavLink
                 to="/"
                 className="transition duration-500 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90 hover:p-2 rounded"
@@ -76,19 +76,21 @@ function Navigation() {
                 </NavLink>
               </button>
             </div>
-            {menuOpen ? (
-              <CloseIcon
-                onClick={() => {
-                  setMenuOpen((prev) => !prev);
-                }}
-              />
-            ) : (
-              <MenuIcon
-                onClick={() => {
-                  setMenuOpen((prev) => !prev);
-                }}
-              />
-            )}{" "}
+            <div className="block lg:hidden">
+              {menuOpen ? (
+                <CloseIcon
+                  onClick={() => {
+                    setMenuOpen((prev) => !prev);
+                  }}
+                />
+              ) : (
+                <MenuIcon
+                  onClick={() => {
+                    setMenuOpen((prev) => !prev);
+                  }}
+                />
+              )}{" "}
+            </div>
           </div>
         </div>{" "}
       </div>
