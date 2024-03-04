@@ -17,7 +17,7 @@ function About() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={`${changeMode ? "text-white p-2" : "text- p-2"}`}>
+    <div className={`${changeMode ? " p-2" : "text- p-2"}`}>
       {" "}
       <div className="flex items-center p-3 m-4 border rounded">
         {" "}
@@ -34,14 +34,8 @@ function About() {
           height={400}
         />
       </div>
-      <div className="flex  flex-col lg:flex-row   border text-black justify-evenly">
-        <div
-          className={`${
-            changeMode
-              ? " p-3 m-2 rounded text-white sm:w-1 lg:w-1/2"
-              : "border p-3 m-2 rounded bg-slate-200 sm:w-1 lg:w-1/2"
-          }`}
-        >
+      <div className="flex  flex-col lg:flex-row     justify-evenly">
+        <div className={`${changeMode ? " p-3 m-2 rounded  sm:w-1 lg:w-1/2" : " p-3 m-2 rounded  sm:w-1 lg:w-1/2"}`}>
           <img src={img2} alt="" className="float-left rounded-[100%] h-40 w-40 object-cover" />
           <h1 className="text-2xl font-thin">Johana Kihiu</h1>
           <h4 className="text-orange-400">Junior Web Developer</h4>
@@ -97,7 +91,7 @@ function About() {
             : "flex lg:flex-row flex-col justify-evenly items-center  m-3 rounded border p-5 gap-5"
         }`}
       >
-        <div className={`${changeMode ? " border rounded" : "bg-white border rounded"}`}>
+        <div className={`${changeMode ? " border rounded" : " border rounded"}`}>
           <h1>
             <span className="text-orange-500">
               <CheckCircleOutlineRoundedIcon />
@@ -115,8 +109,8 @@ function About() {
         <div
           className={`${
             changeMode
-              ? "flex flex-col gap-4 bg-black text-white  rounded p-3 justify-between "
-              : "flex flex-col gap-4 bg-slate-100 border rounded p-3 justify-between "
+              ? "flex flex-col gap-4 text-black   rounded p-3 justify-between "
+              : "flex flex-col gap-4   rounded p-3 justify-between "
           }`}
         >
           <h1 className="flex flex-row  items-center gap-3  overline-red-400">
@@ -195,7 +189,7 @@ function About() {
       <div>
         <marquee
           direction="left"
-          className={`${changeMode ? "text-3xl italic font-serif  m-0" : "text-3xl italic font-serif bg-white m-0"}`}
+          className={`${changeMode ? "text-3xl italic font-serif text-black m-0" : "text-3xl italic font-serif m-0"}`}
         >
           Thank You 🥰 And Welcome! Looking Forward To Working Together AS A Team 🤝
         </marquee>

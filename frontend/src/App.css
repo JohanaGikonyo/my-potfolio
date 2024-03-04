@@ -25,35 +25,13 @@ body {
   /* Change to your desired active background color */
   color: white;
   padding: 3px;
+  letter-spacing: 5px;
+  transform: translate(3px);
+  transition: ease;
 }
 
 /* Style for normal link */
-a {
-  color: white;
-  /* Default link color */
-  text-decoration: none;
-  /* Remove default underline */
-}
 
-/* Style for hovered link */
-a:hover {
-  text-decoration: underline;
-  /* Underline on hover */
-}
-
-/* Style for active link (when clicked) */
-a:active {
-  color: orange;
-  text-decoration: underline;
-  /* Change link color when clicked */
-}
-
-/* Style for visited link */
-a:visited {
-  color: white;
-  text-decoration: underline;
-  /* Visited link color */
-}
 
 /* Style for targeted link (matching the id in the URL) */
 a:target {

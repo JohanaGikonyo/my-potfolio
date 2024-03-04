@@ -32,10 +32,8 @@ function Home() {
   }, [numbers]);
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
-      <div className="flex justify-around  lg:flex-col  items-center bg-black text-white lg:h-[100vh] lg:w-[1000px] sticky top-20 lg:top-0 z-50 lg:z-0 left-0  p-2 rounded ">
-        <a href="#description">Intro</a>
-        <a href="#about">Info</a>
-        <a href="#work">Projects</a>
+      <div className="flex justify-around  lg:flex-col  items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded lg:overflow-y-scroll">
+        <a href="#description">Intro</a>|<a href="#about">Info</a>|<a href="#work">Projects</a>
       </div>
       <div className="">
         <section

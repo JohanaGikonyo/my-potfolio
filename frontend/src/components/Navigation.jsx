@@ -35,14 +35,14 @@ function Navigation() {
         </div>
         <div className="flex gap-3 flex-row justify-between">
           {changeMode ? (
-            <NightsStayOutlinedIcon onClick={() => setChangeMode((prev) => !prev)} />
-          ) : (
             <WbSunnyOutlinedIcon onClick={() => setChangeMode((prev) => !prev)} />
+          ) : (
+            <NightsStayOutlinedIcon onClick={() => setChangeMode((prev) => !prev)} />
           )}
           <div
             className={`${
               menuOpen
-                ? "flex bg-black text-white absolute z-20 top-0 right-0  rounded p-5 transition ease-in-out duration-700 transform "
+                ? "flex bg-black text-white absolute z-0 top-0 right-0  rounded p-5 transition ease-in-out duration-700 transform "
                 : ""
             }`}
           >

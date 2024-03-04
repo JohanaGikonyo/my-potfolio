@@ -12,7 +12,7 @@ import { useState } from "react";
 function App() {
   const [changeMode, setChangeMode] = useState(false);
   return (
-    <>
+    <div className={`${changeMode ? "bg-white text-black" : "bg-slate-800 text-white"}`}>
       <Context.Provider value={{ changeMode, setChangeMode }}>
         <Navigation />
 
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         <Footer />
       </Context.Provider>
-    </>
+    </div>
   );
 }
 

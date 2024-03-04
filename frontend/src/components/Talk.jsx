@@ -17,14 +17,18 @@ function Talk() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={`${changeMode ? "text-white bg-slate-200  p-0 rounded" : ""}`}>
+    <div className={`${changeMode ? "text-white   p-0 rounded" : "flex flex-col items-center"}`}>
       <Box
         component="form"
         sx={{
           "& .MuiTextField-root": { m: 1, width: "25ch" },
         }}
         noValidate
-        className="flex flex-col items-center gap-5 m-3"
+        className={`${
+          changeMode
+            ? " flex flex-col items-center gap-5 m-3"
+            : "bg-white flex flex-col items-center gap-5 m-3 w-[25%] rounded p-5"
+        }`}
         autoComplete="off"
       >
         <TextField required id="outlined-required" label="Email" defaultValue="" />
@@ -66,7 +70,7 @@ function Talk() {
             width={400}
             height={400}
           />
-          Let`s Talk:<span className="text-orange">+254740550484</span>
+          Let`s Talk:<span className="text-orange-500">+254740550484</span>
         </div>
         Email:{" "}
         <a href="mailto:johanagikonyo552@gmail.com" className="text-orange-500">
