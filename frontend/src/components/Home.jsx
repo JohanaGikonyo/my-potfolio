@@ -32,7 +32,7 @@ function Home() {
   }, [numbers]);
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
-      <div className="flex justify-around  lg:flex-col  items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded lg:overflow-y-scroll">
+      <div className="flex justify-around  lg:flex-col  items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded">
         <button className="btn  p-3">
           <a href="#description">Intro</a>
         </button>
@@ -66,7 +66,7 @@ function Home() {
             <h5 className="text-blue text-2xl italic">
               Johana Gikonyo Kihiu
               <br />
-              <span className="p-3 text-sm text-orange-400 m-5">Website Developer Developer</span>
+              <span className="p-3 text-sm text-orange-400 m-5">Website Developer | Engineer</span>
             </h5>
             <h6>A passionate Web Developer</h6>
             <div className="flex flex-row">
@@ -323,12 +323,14 @@ function Home() {
               </p>
             </div>
           </div>
-          <button className="border rounded border-t-orange-500 p-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
-            See{" "}
-            <span className="text-orange-400 ">
-              More <ArrowForwardIcon />
-            </span>
-          </button>
+          <NavLink to="work">
+            <button className="border rounded border-t-orange-500 p-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
+              See{" "}
+              <span className="text-orange-400 ">
+                More <ArrowForwardIcon />
+              </span>
+            </button>
+          </NavLink>{" "}
         </section>
         <section className="carousel w-full">
           <div className="carousel-item w-full relative flex flex-col items-center p-2 border m-5">
