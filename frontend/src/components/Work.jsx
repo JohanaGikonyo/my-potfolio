@@ -22,8 +22,8 @@ function Work() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="m-7 tetx-white">
-      <Slider {...settings} className="">
+    <div className="m-7  flex flex-col items-center">
+      <Slider {...settings} className="w-[25%]">
         <div>
           {" "}
           <div className="flex flex-col border p-3 m-2 rounded items-center justify-around flex-wrap gap-2 hover:bg-slate-900 hover:text-white ">
