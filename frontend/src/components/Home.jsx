@@ -33,7 +33,17 @@ function Home() {
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
       <div className="flex justify-around  lg:flex-col  items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded lg:overflow-y-scroll">
-        <a href="#description">Intro</a>|<a href="#about">Info</a>|<a href="#work">Projects</a>
+        <button className="btn  p-3">
+          <a href="#description">Intro</a>
+        </button>
+        |
+        <button className="btn  p-3">
+          <a href="#about">Info</a>
+        </button>
+        |
+        <button className="btn  p-3">
+          <a href="#work">Projects</a>
+        </button>
       </div>
       <div className="">
         <section
