@@ -17,7 +17,13 @@ function Talk() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={`${changeMode ? "text-white   p-0 rounded" : "flex flex-col items-center"}`}>
+    <div
+      className={`${
+        changeMode
+          ? "text-white   p-0 rounded lg:flex lg:flex-row justify-around"
+          : "flex flex-col items-center lg:flex lg:flex-row justify-around"
+      } `}
+    >
       <Box
         component="form"
         sx={{

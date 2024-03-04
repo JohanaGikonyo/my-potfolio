@@ -23,7 +23,7 @@ function Home() {
   const [numbers, setNumbers] = useState(0);
   useEffect(() => {
     // Scroll to the top when the pathname changes
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     const countNumbers = setInterval(() => {
       numbers >= 300 ? "" : setNumbers(numbers + 1);

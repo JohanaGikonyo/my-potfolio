@@ -16,23 +16,37 @@ function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const greetings = () => {
+    let greet = "";
+    let hours = new Date().getHours();
+    if (hours < 12) {
+      greet = <h2>Good Morning</h2>;
+    } else if (hours <= 16) {
+      greet = <h2>Good Afternoon</h2>;
+    } else {
+      greet = <h2>Good EVenning</h2>;
+    }
+    return greet;
+  };
   return (
     <div className={`${changeMode ? " p-2" : "text- p-2"}`}>
       {" "}
-      <div className="flex items-center p-3 m-4 border rounded">
-        {" "}
-        <Lottie
-          options={{
-            loop: true,
-            autoplay: true,
-            animationData: animationData,
-            rendererSettings: {
-              preserveAspectRatio: "xMidYMid slice",
-            },
-          }}
-          width={400}
-          height={400}
-        />
+      <div className="flex items-center justify-around  m-4 border rounded">
+        <div className="text-green-500"> {greetings()}</div>
+        <div>
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: animationData,
+              rendererSettings: {
+                preserveAspectRatio: "xMidYMid slice",
+              },
+            }}
+            width={400}
+            height={400}
+          />
+        </div>
       </div>
       <div className="flex  flex-col lg:flex-row     justify-evenly">
         <div className={`${changeMode ? " p-3 m-2 rounded  sm:w-1 lg:w-1/2" : " p-3 m-2 rounded  sm:w-1 lg:w-1/2"}`}>
