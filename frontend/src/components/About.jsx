@@ -24,7 +24,7 @@ function About() {
     } else if (hours <= 16) {
       greet = <h2>Good Afternoon</h2>;
     } else {
-      greet = <h2>Good EVenning</h2>;
+      greet = <h2>Good Evenning</h2>;
     }
     return greet;
   };
