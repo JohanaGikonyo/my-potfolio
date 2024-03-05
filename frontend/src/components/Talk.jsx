@@ -33,7 +33,7 @@ function Talk() {
         className={`${
           changeMode
             ? " flex flex-col items-center gap-5 m-3"
-            : "bg-white flex flex-col items-center gap-5 m-3 w-[25%] rounded p-5"
+            : "bg-white flex flex-col items-center gap-5 m-3 lg:w-[25%] z-40 rounded p-5 shadow-slate-400 shadow-md"
         }`}
         autoComplete="off"
       >

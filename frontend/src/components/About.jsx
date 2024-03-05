@@ -31,8 +31,8 @@ function About() {
   return (
     <div className={`${changeMode ? " p-2" : "text- p-2"}`}>
       {" "}
-      <div className="flex items-center justify-around  m-4 border rounded">
-        <div className="text-green-500"> {greetings()}</div>
+      <div className="flex flex-col lg:flex-row items-center justify-around  m-4  rounded p-5">
+        <div className="text-green-500 m-5"> {greetings()}</div>
         <div>
           <Lottie
             options={{
@@ -44,15 +44,17 @@ function About() {
               },
             }}
             width={400}
-            height={400}
+            height={300}
           />
         </div>
       </div>
-      <div className="flex  flex-col lg:flex-row     justify-evenly">
-        <div className={`${changeMode ? " p-3 m-2 rounded  sm:w-1 lg:w-1/2" : " p-3 m-2 rounded  sm:w-1 lg:w-1/2"}`}>
-          <img src={img2} alt="" className="float-left rounded-[100%] h-40 w-40 object-cover" />
-          <h1 className="text-2xl font-thin">Johana Kihiu</h1>
-          <h4 className="text-orange-400">Junior Web Developer</h4>
+      <div className="flex  flex-col lg:flex-row   items-center  justify-evenly">
+        <div className={`${changeMode ? "  " : "  "}`}>
+          <div className="float-left m-0">
+            <img src={img2} alt="" className="float-left rounded-[100%] h-40 w-40 object-cover" />
+            <h1 className="text-2xl font-thin">Johana Kihiu</h1>
+            <h4 className="text-orange-400">Junior Web Developer</h4>
+          </div>{" "}
           <p className="text-2xl font-sanrif ">
             Innovative, task-driven professional with more than 2 years of experience in Web Design and development
             across diverse industries . Equipedwith a record of successin consistency and provinding the technological
@@ -102,7 +104,7 @@ function About() {
         className={`${
           changeMode
             ? "flex lg:flex-row flex-col justify-evenly items-center  m-3 rounded p-5 gap-5"
-            : "flex lg:flex-row flex-col justify-evenly items-center  m-3 rounded border p-5 gap-5"
+            : "flex lg:flex-row flex-col justify-evenly items-center  m-3 rounded  p-5 gap-5"
         }`}
       >
         <div className={`${changeMode ? " border rounded" : " border rounded"}`}>

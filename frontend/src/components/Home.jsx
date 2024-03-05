@@ -5,6 +5,10 @@ import img5 from "./images/computer3.jpg";
 import img6 from "./images/computer4.jpg";
 import img7 from "./images/code1.jpg";
 import img8 from "./images/johana1.jpeg";
+import { BiLogoWhatsapp } from "react-icons/bi";
+import { BiLogoFacebookCircle } from "react-icons/bi";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import GitHub from "@mui/icons-material/GitHub";
 import animationData from "./images/Animation3.json";
 import animationdownload from "./images/download.json";
 
@@ -32,7 +36,7 @@ function Home() {
   }, [numbers]);
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
-      <div className="flex justify-around  lg:flex-col  items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded">
+      <div className="flex justify-around  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded">
         <button className="btn  p-3">
           <a href="#description">Intro</a>
         </button>
@@ -44,12 +48,29 @@ function Home() {
         <button className="btn  p-3">
           <a href="#work">Projects</a>
         </button>
+        <div>
+          {" "}
+          <div className="flex flex-end justify-center gap-3">
+            <button>
+              <a href="https://wa.me:/254742377527">
+                <BiLogoWhatsapp />
+              </a>
+            </button>{" "}
+            <a href="https://www.linkedin.com/in/johana-gikonyo-789118233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              {" "}
+              <LinkedIn />
+            </a>
+            <a href="https://github.com/JohanaGikonyo">
+              <GitHub />
+            </a>{" "}
+            <a href="https://www.facebook.com/johana.gikonyo.3">
+              <BiLogoFacebookCircle />
+            </a>
+          </div>
+        </div>
       </div>
       <div className="">
-        <section
-          className="flex flex-col lg:flex-row justify-around border border-collapse items-center"
-          id="description"
-        >
+        <section className="flex flex-col lg:flex-row justify-around  border-collapse items-center" id="description">
           <Lottie
             options={{
               loop: true,
@@ -112,7 +133,7 @@ function Home() {
             className={`${
               changeMode
                 ? " text-center p-5 lg:w-1/2 flex flex-col items-center"
-                : "border text-center p-5 lg:w-1/2 flex flex-col items-center"
+                : "text-center p-5 lg:w-1/2 flex flex-col items-center"
             }`}
           >
             {" "}
@@ -123,7 +144,7 @@ function Home() {
           className={`${
             changeMode
               ? "flex flex-col lg:flex-row items-center justify-between  m-3 p-2"
-              : "flex flex-col lg:flex-row items-center border justify-between  m-3 p-2"
+              : "flex flex-col lg:flex-row items-center  justify-between  m-3 p-2"
           }`}
         >
           <div
@@ -175,7 +196,7 @@ function Home() {
             className={`${
               changeMode
                 ? "flex lg:flex-row gap-2 justify-around m-2  p-2 overflow-x-auto"
-                : "flex lg:flex-row gap-2 border justify-around m-2  p-2 overflow-x-auto -webkit-scrollbar-none"
+                : "flex lg:flex-row gap-2  justify-around m-2  p-2 overflow-x-auto -webkit-scrollbar-none"
             }`}
           >
             {" "}
@@ -228,9 +249,9 @@ function Home() {
               Latest <span className="text-orange-500">Projects</span>
             </h3>
           </div>
-          <div className="flex lg:flex-row gap-2 rounded p-2 m-3 flex-wrap">
+          <div className="lg:grid lg:grid-cols-2  lg:gap-20 flex flex-col gap-8  rounded p-5 items-center ">
             <div
-              className="flex flex-col border p-2 m-2 rounded items-center justify-around flex-wrap gap-2 transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+              className="flex flex-col  p-2 m-2 rounded items-center justify-around flex-wrap gap-2 bg-slate-400 transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90 "
             >
               <a href="https://jkelectronics.vercel.app/">
@@ -253,7 +274,7 @@ function Home() {
               </p>
             </div>
             <div
-              className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+              className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90"
             >
               <a href="https://clustercalculator.vercel.app/">
@@ -276,7 +297,7 @@ function Home() {
               </p>
             </div>
             <div
-              className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+              className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90"
             >
               <a href="https://survayorsdocuments.vercel.app/">
@@ -299,7 +320,7 @@ function Home() {
               </p>{" "}
             </div>
             <div
-              className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white
+              className="flex flex-col  p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90"
             >
               <a href="https://shoppfyapp.vercel.app/">
@@ -312,7 +333,7 @@ function Home() {
                 <span>
                   {" "}
                   <a href="https://shoppfyapp.vercel.app/">
-                    <button className="border border-orange-400 p-1 rounded m-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
+                    <button className=" border-orange-400 p-1 rounded m-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
                       View{" "}
                       <span className="text-blue-400">
                         <ArrowForwardIcon />
@@ -324,7 +345,7 @@ function Home() {
             </div>
           </div>
           <NavLink to="work">
-            <button className="border rounded border-t-orange-500 p-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
+            <button className=" rounded border-t-orange-500 p-3 transition duration-1000 ease-in-out transform hover:bg-orange-400 hover:text-white hover:scale-90">
               See{" "}
               <span className="text-orange-400 ">
                 More <ArrowForwardIcon />
