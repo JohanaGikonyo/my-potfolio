@@ -37,7 +37,7 @@ function Footer() {
         <BiLogoTwitter />
         <BiLogoUpwork />
       </div>
-      <div>@copywrite{new Date().getFullYear()} @jgkihiu</div>
+      <div>@copyRight{new Date().getFullYear()} @jgkihiu</div>
     </div>
   );
 }
