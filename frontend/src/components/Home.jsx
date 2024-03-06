@@ -251,7 +251,7 @@ function Home() {
           </div>
           <div className="lg:grid lg:grid-cols-2  lg:gap-20 flex flex-col gap-8  rounded p-5 items-center ">
             <div
-              className="flex flex-col  p-2 m-2 rounded items-center justify-around flex-wrap gap-2 bg-slate-400 transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
+              className="flex flex-col  p-2 m-2 rounded items-center justify-around flex-wrap gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90 "
             >
               <a href="https://jkelectronics.vercel.app/">
@@ -274,7 +274,7 @@ function Home() {
               </p>
             </div>
             <div
-              className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
+              className="flex flex-col  p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90"
             >
               <a href="https://clustercalculator.vercel.app/">
@@ -297,7 +297,7 @@ function Home() {
               </p>
             </div>
             <div
-              className="flex flex-col border p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
+              className="flex flex-col  p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform hover:bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90"
             >
               <a href="https://survayorsdocuments.vercel.app/">
@@ -320,7 +320,7 @@ function Home() {
               </p>{" "}
             </div>
             <div
-              className="flex flex-col  p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform bg-slate-400 hover:text-white z-4 shadow-lg shadow-slate-900
+              className="flex flex-col  p-2 m-2 rounded items-center justify-around gap-2  transition duration-500 ease-in-out transform  hover:text-white z-4 shadow-lg shadow-slate-900
             hover:scale-90"
             >
               <a href="https://shoppfyapp.vercel.app/">
