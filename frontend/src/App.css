@@ -30,6 +30,14 @@ body {
   transition: ease;
 }
 
+.links .active {
+  text-decoration: underline;
+  background-color: rgb(77, 74, 74);
+  letter-spacing: 2px;
+  padding: 2px;
+}
+
+
 /* Style for normal link */
 
 
