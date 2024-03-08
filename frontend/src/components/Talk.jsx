@@ -50,7 +50,7 @@ function Talk() {
     const loadingTimer = setTimeout(() => {
       setLoadingMessage(false);
       loadingMessage ? history("/") : "";
-    }, [3000]);
+    }, [2000]);
 
     return () => clearTimeout(loadingTimer);
   }, [loadingMessage, history]);

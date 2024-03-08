@@ -21,7 +21,7 @@ import { useContext, useEffect, useState } from "react";
 import { Context } from "../Helpers/Helper";
 import { NavLink } from "react-router-dom";
 import pdf from "./images/cv.pdf";
-
+import { Link } from "react-scroll";
 function Home() {
   const { changeMode } = useContext(Context);
   const [numbers, setNumbers] = useState(0);
@@ -36,18 +36,42 @@ function Home() {
   }, [numbers]);
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
-      <div className="flex justify-around  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded">
-        <button className="btn  p-3">
-          <a href="#description">Intro</a>
-        </button>
-        |
-        <button className="btn  p-3">
-          <a href="#about">Info</a>
-        </button>
-        |
-        <button className="btn  p-3">
-          <a href="#work">Projects</a>
-        </button>
+      <div className="flex justify-around lg:justify-center  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded">
+        <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
+          InTro
+        </Link>
+        <br />
+        <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
+          InFo
+        </Link>{" "}
+        <br />
+        <Link
+          activeClass="active"
+          to="experience"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="rounded"
+        >
+          Experience
+        </Link>
+        <br />
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="rounded"
+        >
+          Projects
+        </Link>
+        <br />
+        <Link activeClass="active" to="quotes" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
+          Quotes
+        </Link>
         <div>
           {" "}
           <div className="flex flex-end justify-center gap-3">
@@ -70,7 +94,7 @@ function Home() {
         </div>
       </div>
       <div className="">
-        <section className="flex flex-col lg:flex-row justify-around  border-collapse items-center" id="description">
+        <section className="flex flex-col lg:flex-row justify-around  border-collapse items-center" id="intro">
           <Lottie
             options={{
               loop: true,
@@ -146,6 +170,7 @@ function Home() {
               ? "flex flex-col lg:flex-row items-center justify-between  m-3 p-2"
               : "flex flex-col lg:flex-row items-center  justify-between  m-3 p-2"
           }`}
+          id="about"
         >
           <div
             className="bg-blue-500 flex flex-col items-center justify-evenly rounded lg:w-1/2 m-2 text-white text-xl transition duration-500 ease-in-out transform hover:bg-slate-800 hover:text-white
@@ -188,7 +213,7 @@ function Home() {
             </NavLink>
           </div>
         </section>
-        <section>
+        <section id="experience">
           <div>
             <h3 className="overline-red-400 ">Knowlege And EXperience</h3>
           </div>
@@ -242,7 +267,7 @@ function Home() {
               ? "flex flex-col  items-center justify-between  m-3 p-2"
               : "flex flex-col  items-center boredr justify-between  m-3 p-2"
           }`}
-          id="work"
+          id="projects"
         >
           <div>
             <h3 className="underline">
@@ -353,7 +378,7 @@ function Home() {
             </button>
           </NavLink>{" "}
         </section>
-        <section className="carousel w-full">
+        <section className="carousel w-full" id="quotes">
           <div className="carousel-item w-full relative flex flex-col items-center p-2 border m-5">
             <div className="flex flex-row">
               <p>
