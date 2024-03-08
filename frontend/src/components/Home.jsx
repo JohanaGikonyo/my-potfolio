@@ -37,39 +37,23 @@ function Home() {
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
       <div className="links cursor-pointer flex flex-row justify-center lg:justify-center  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] lg:sticky fixed top-12 lg:top-0 z-30 lg:z-0 lg:left-0 items-center  p-5   lg:m-0 rounded gap-1 overflow-x-scroll wrap ">
-        <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
+        <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-70} duration={500} className="  ">
           InTro
         </Link>
         <br />
-        <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
+        <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500} className="  ">
           Description
         </Link>{" "}
         <br />
-        <Link
-          activeClass="active"
-          to="experience"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="rounded"
-        >
+        <Link activeClass="active" to="experience" spy={true} smooth={true} offset={-70} duration={500} className="  ">
           Experience
         </Link>
         <br />
-        <Link
-          activeClass="active"
-          to="projects"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="rounded"
-        >
+        <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={500} className="  ">
           Projects
         </Link>
         <br />
-        <Link activeClass="active" to="quotes" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
+        <Link activeClass="active" to="quotes" spy={true} smooth={true} offset={-70} duration={500} className="  ">
           Quotes
         </Link>
         <div>

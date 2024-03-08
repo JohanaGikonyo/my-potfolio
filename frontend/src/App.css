@@ -20,7 +20,7 @@ body {
   color: black;
 }
 
-.active {
+.navbar .active {
   background-color: rgb(236, 97, 46);
   /* Change to your desired active background color */
   color: white;
@@ -31,11 +31,26 @@ body {
 }
 
 .links .active {
-  text-decoration: underline;
-  background-color: rgb(77, 74, 74);
+  text-decoration: none;
+
+  background-color: none;
   letter-spacing: 2px;
   padding: 2px;
+  border-left: solid blue 2px;
 }
+
+@media screen and (max-width:480px) {
+  .links .active {
+    text-decoration: none;
+
+    background-color: none;
+    border: none;
+    letter-spacing: 2px;
+    padding: 2px;
+    border-bottom: solid blue 2px;
+  }
+}
+
 
 
 /* Style for normal link */
