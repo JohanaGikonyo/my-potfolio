@@ -36,7 +36,7 @@ function Home() {
   }, [numbers]);
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
-      <div className="links cursor-pointer flex justify-around lg:justify-center  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded">
+      <div className="links cursor-pointer flex justify-around lg:justify-center  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded gap-1 overflow-x-scroll">
         <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
           InTro
         </Link>
