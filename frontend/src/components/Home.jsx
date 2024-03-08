@@ -36,7 +36,7 @@ function Home() {
   }, [numbers]);
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
-      <div className="links cursor-pointer flex justify-around lg:justify-center  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] sticky top-10 lg:top-0 z-30 lg:z-0 left-0  p-2 rounded gap-1 overflow-x-auto">
+      <div className="links cursor-pointer flex flex-row justify-center lg:justify-center  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] lg:sticky fixed top-12 lg:top-0 z-30 lg:z-0 lg:left-0 items-center  p-5   lg:m-0 rounded gap-1 overflow-x-scroll wrap ">
         <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-70} duration={500} className="rounded">
           InTro
         </Link>
@@ -220,8 +220,8 @@ function Home() {
           <div
             className={`${
               changeMode
-                ? "flex lg:flex-row gap-2 justify-around m-2  p-2 overflow-x-auto"
-                : "flex lg:flex-row gap-2  justify-around m-2  p-2 overflow-x-auto -webkit-scrollbar-none"
+                ? "flex lg:flex-row gap-2 justify-around m-2  p-2 overflow-x-auto p-5 right-0 overflow-visible"
+                : "flex lg:flex-row gap-2  justify-around m-2  p-2 overflow-x-auto -webkit-scrollbar-none p-5 right-0 overflow-visible"
             }`}
           >
             {" "}
