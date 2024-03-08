@@ -220,8 +220,8 @@ function Home() {
           <div
             className={`${
               changeMode
-                ? "flex lg:flex-row gap-2 justify-around m-2  p-2 overflow-x-auto p-5 right-0 overflow-visible"
-                : "flex lg:flex-row gap-2  justify-around m-2  p-2 overflow-x-auto -webkit-scrollbar-none p-5 right-0 overflow-visible"
+                ? "flex lg:flex-row gap-2 justify-around m-2  p-2 overflow-x-auto p-5"
+                : "flex lg:flex-row gap-2  justify-around m-2  p-2 overflow-x-auto -webkit-scrollbar-none p-5"
             }`}
           >
             {" "}
