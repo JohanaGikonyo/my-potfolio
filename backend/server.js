@@ -28,7 +28,9 @@ app.post("/signin", async (req, res) => {
             await user.save();
             res.json("success")
         } else {
-            const hashedPassword = await bcrypt.hash(password)
+            const salt = await bcrypt.genSalt(10)
+
+            const hashedPassword = await bcrypt.hash(password, salt)
             const data = {
                 email, password: hashedPassword
                 ,
