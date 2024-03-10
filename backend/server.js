@@ -1,4 +1,5 @@
 const express = require('express')
+const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
@@ -27,8 +28,9 @@ app.post("/signin", async (req, res) => {
             await user.save();
             res.json("success")
         } else {
+            const hashedPassword = await bcrypt.hash(password)
             const data = {
-                email, password
+                email, password: hashedPassword
                 ,
                 message
 

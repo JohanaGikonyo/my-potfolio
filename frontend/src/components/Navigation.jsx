@@ -33,7 +33,7 @@ function Navigation() {
             JG KIHIU
           </h5>
         </div>
-        <div className="flex gap-3 flex-row justify-between">
+        <div className="flex gap-3 flex-row justify-between items-center">
           {changeMode ? (
             <WbSunnyOutlinedIcon onClick={() => setChangeMode((prev) => !prev)} />
           ) : (
@@ -46,7 +46,10 @@ function Navigation() {
                 : ""
             }`}
           >
-            <div className={`${menuOpen ? "flex flex-col gap-5" : "hidden"} lg:flex lg:flex-row lg:gap-5  navbar`}>
+            <div
+              className={`${menuOpen ? "flex flex-col gap-5" : "hidden"} lg:flex lg:flex-row lg:gap-5 lg:items-center
+                navbar`}
+            >
               <NavLink
                 to="/"
                 className="transition duration-500 ease-in-out transform     rounded "
