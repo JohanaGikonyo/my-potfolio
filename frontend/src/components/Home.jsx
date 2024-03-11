@@ -25,7 +25,7 @@ import { Link } from "react-scroll";
 function Home() {
   const { changeMode } = useContext(Context);
   const [numbers, setNumbers] = useState(0);
-  const { chooseSection, setChooseSection } = useContext(Context);
+  const { chooseSection } = useContext(Context);
   useEffect(() => {
     // Scroll to the top when the pathname changes
     // window.scrollTo(0, 0);

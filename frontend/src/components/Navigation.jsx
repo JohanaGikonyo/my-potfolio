@@ -8,11 +8,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import CloseIcon from "@mui/icons-material/Close";
 import { Context } from "../Helpers/Helper";
-import { useState } from "react";
+import { useState, useRef } from "react";
 function Navigation() {
   const { changeMode, setChangeMode } = useContext(Context);
   const [menuOpen, setMenuOpen] = useState(false);
   const { chooseSection, setChooseSection } = useContext(Context);
+  const menuref = useRef(null);
   useEffect(() => {
     if (changeMode) {
       document.body.style.backgroundColor = "black";
@@ -21,7 +22,16 @@ function Navigation() {
       document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
     }
-  }, [changeMode]);
+    const handleOutsideClick = (event) => {
+      if (menuref.current && menuref.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.body.addEventListener("click", handleOutsideClick);
+    return () => {
+      document.body.removeEventListener("click", handleOutsideClick);
+    };
+  }, [changeMode, setMenuOpen]);
 
   return (
     <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"} relative z-50`}>
@@ -51,9 +61,10 @@ function Navigation() {
           <div
             className={`${
               menuOpen
-                ? "flex bg-black text-white absolute z-0 top-0 right-0  rounded p-5 transition ease-in-out duration-700 transform "
+                ? "flex bg-black text-white absolute z-0 top-0 right-0  rounded p-5 transition ease-in-out duration-1000 transform translate-x-1 translate-y-5 "
                 : ""
             }`}
+            ref={menuref}
           >
             <div
               className={`${menuOpen ? "flex flex-col gap-5" : "hidden"} lg:flex lg:flex-row lg:gap-5 lg:items-center

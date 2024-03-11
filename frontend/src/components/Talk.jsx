@@ -77,7 +77,7 @@ function Talk() {
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <div className=" sticky z-50 absolute left-[25%] top-[50%] text-green-800 bg-white">
+        <div className="  z-50 absolute left-[25%] top-[50%] text-green-800 bg-white">
           {" "}
           {loading ? (
             <h1>
