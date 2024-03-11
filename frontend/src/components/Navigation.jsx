@@ -38,10 +38,12 @@ function Navigation() {
     <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"} relative z-50`}>
       <div className="flex flex-row justify-between p-1 m-2 items-center ">
         <div className=" italic font-thin text-3xl">
-          <h5 className="flex items-center justify-between gap-5 text-teal" style={{ color: "#313B72" }}>
+          <h5
+            className={`flex items-center justify-between gap-5 text-teal ${changeMode ? "text-white" : "text-black"}`}
+          >
             <span>
               {" "}
-              <img src={img3} alt="" className="w-10 h-10 object-cover rounded-[50%]" />
+              <img src={img3} alt="" className={`w-10 h-10 object-cover rounded-[50%]`} />
             </span>
             Johana Kihiu
           </h5>
