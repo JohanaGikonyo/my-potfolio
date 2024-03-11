@@ -29,8 +29,6 @@ function Home() {
   const sectionref = useRef(null);
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      console.log("Event target:", event.target);
-      console.log("Section ref:", sectionref.current);
       if (sectionref.current && sectionref.current.contains(event.target)) {
         setChooseSection(false);
       }
