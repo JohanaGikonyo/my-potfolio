@@ -25,6 +25,7 @@ import { Link } from "react-scroll";
 function Home() {
   const { changeMode } = useContext(Context);
   const [numbers, setNumbers] = useState(0);
+  const { chooseSection, setChooseSection } = useContext(Context);
   useEffect(() => {
     // Scroll to the top when the pathname changes
     // window.scrollTo(0, 0);
@@ -35,8 +36,12 @@ function Home() {
     return () => clearInterval(countNumbers);
   }, [numbers]);
   return (
-    <div className="flex flex-col lg:flex-row  justify-between gap-5  ">
-      <div className="links cursor-pointer flex flex-row justify-center lg:justify-center  bg-white text-black lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] lg:sticky fixed top-12 lg:top-0 z-30 lg:z-0 lg:left-0 items-center  p-5   lg:m-0 rounded gap-1 overflow-x-scroll wrap ">
+    <div className="flex flex-col lg:flex-row  justify-between gap-5 ">
+      <div
+        className={`links  cursor-pointer flex flex-col w-30 ml-[45%] justify-center lg:justify-center  bg-white text-black ${
+          !chooseSection ? "hidden" : ""
+        } lg:flex lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] lg:sticky fixed top-12 lg:top-0 z-30 lg:z-0 lg:left-0 items-center  p-5   lg:m-0 rounded gap-1 `}
+      >
         <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-70} duration={500} className="  ">
           InTro
         </Link>
@@ -77,6 +82,7 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="">
         <section className="flex flex-col lg:flex-row justify-around  border-collapse items-center" id="intro">
           <Lottie

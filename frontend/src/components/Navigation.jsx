@@ -4,13 +4,15 @@ import NightsStayOutlinedIcon from "@mui/icons-material/NightsStayOutlined";
 import { useEffect, useContext } from "react";
 import img3 from "./images/logo.jpg";
 import MenuIcon from "@mui/icons-material/Menu";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import CloseIcon from "@mui/icons-material/Close";
 import { Context } from "../Helpers/Helper";
 import { useState } from "react";
 function Navigation() {
   const { changeMode, setChangeMode } = useContext(Context);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const { chooseSection, setChooseSection } = useContext(Context);
   useEffect(() => {
     if (changeMode) {
       document.body.style.backgroundColor = "black";
@@ -32,6 +34,13 @@ function Navigation() {
             </span>
             JG KIHIU
           </h5>
+        </div>
+        <div className="lg:hidden ">
+          {chooseSection ? (
+            <ExpandLessIcon onClick={() => setChooseSection((prev) => !prev)} />
+          ) : (
+            <ExpandMoreIcon onClick={() => setChooseSection((prev) => !prev)} />
+          )}
         </div>
         <div className="flex gap-3 flex-row justify-between items-center">
           {changeMode ? (

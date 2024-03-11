@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [changeMode, setChangeMode] = useState(false);
   const [loadingPage, setLoadingPage] = useState(true);
+  const [chooseSection, setChooseSection] = useState(false);
   useEffect(() => {
     const pageTimer = setTimeout(() => {
       setLoadingPage(false);
@@ -44,7 +45,7 @@ function App() {
         </h1>
       ) : (
         <div>
-          <Context.Provider value={{ changeMode, setChangeMode }}>
+          <Context.Provider value={{ changeMode, setChangeMode, chooseSection, setChooseSection }}>
             <Navigation />
 
             <Routes>
