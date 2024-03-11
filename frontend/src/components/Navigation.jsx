@@ -14,6 +14,7 @@ function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { chooseSection, setChooseSection } = useContext(Context);
   const menuref = useRef(null);
+
   useEffect(() => {
     if (changeMode) {
       document.body.style.backgroundColor = "black";
@@ -36,13 +37,13 @@ function Navigation() {
   return (
     <div className={`top-0 sticky nav ${changeMode ? "dark-mode" : "bright-mode"} relative z-50`}>
       <div className="flex flex-row justify-between p-1 m-2 items-center ">
-        <div className="text-orange-400 italic font-thin text-5xl">
-          <h5 className="flex">
+        <div className=" italic font-thin text-3xl">
+          <h5 className="flex items-center justify-between gap-5 text-teal" style={{ color: "#313B72" }}>
             <span>
               {" "}
               <img src={img3} alt="" className="w-10 h-10 object-cover rounded-[50%]" />
             </span>
-            JG KIHIU
+            Johana Kihiu
           </h5>
         </div>
         <div className="lg:hidden ">

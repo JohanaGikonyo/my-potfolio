@@ -177,8 +177,8 @@ function Home() {
           id="about"
         >
           <div
-            className="bg-blue-500 flex flex-col items-center justify-evenly rounded lg:w-1/2 m-2 text-white text-xl transition duration-500 ease-in-out transform hover:bg-slate-800 hover:text-white
-            hover:scale-110"
+            className=" flex flex-col items-center justify-evenly rounded lg:w-1/2 m-2  text-xl transition duration-500 ease-in-out transform hover:bg-slate-800 hover:text-white
+            hover:scale-90"
           >
             <img src={img3} alt="" className="w-60 h-60 rounded m-3 object-cover" />
             <h3>3+ Years of Experience</h3>
