@@ -17,7 +17,7 @@ import { BiRightArrow, BiSolidQuoteSingleLeft } from "react-icons/bi";
 import { BiSolidQuoteSingleRight } from "react-icons/bi";
 import { BiLeftArrow } from "react-icons/bi";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../Helpers/Helper";
 import { NavLink } from "react-router-dom";
 import pdf from "./images/cv.pdf";
@@ -25,22 +25,36 @@ import { Link } from "react-scroll";
 function Home() {
   const { changeMode } = useContext(Context);
   const [numbers, setNumbers] = useState(0);
-  const { chooseSection } = useContext(Context);
+  const { chooseSection, setChooseSection } = useContext(Context);
+  const sectionref = useRef(null);
   useEffect(() => {
-    // Scroll to the top when the pathname changes
-    // window.scrollTo(0, 0);
+    const handleOutsideClick = (event) => {
+      console.log("Event target:", event.target);
+      console.log("Section ref:", sectionref.current);
+      if (sectionref.current && sectionref.current.contains(event.target)) {
+        setChooseSection(false);
+      }
+    };
+
+    document.body.addEventListener("click", handleOutsideClick);
 
     const countNumbers = setInterval(() => {
-      numbers >= 300 ? "" : setNumbers(numbers + 1);
-    }, [0.5]);
-    return () => clearInterval(countNumbers);
-  }, [numbers]);
+      setNumbers((prevNumbers) => (prevNumbers >= 300 ? prevNumbers : prevNumbers + 1));
+    }, 0.5); // Adjust the interval as needed (milliseconds)
+
+    return () => {
+      clearInterval(countNumbers);
+      document.body.removeEventListener("click", handleOutsideClick);
+    };
+  }, [setChooseSection]);
+
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5 ">
       <div
         className={`links  cursor-pointer flex flex-col w-30 ml-[45%] justify-center lg:justify-center  bg-white text-black ${
           !chooseSection ? "hidden" : ""
         } lg:flex lg:bg-slate-800 lg:text-white lg:flex-col  lg:items-center   lg:h-[100vh] lg:w-[1000px] lg:sticky fixed top-12 lg:top-0 z-30 lg:z-0 lg:left-0 items-center  p-5   lg:m-0 rounded gap-1 `}
+        ref={sectionref}
       >
         <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-70} duration={500} className="  ">
           InTro
