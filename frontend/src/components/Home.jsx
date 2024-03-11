@@ -17,7 +17,7 @@ import { BiRightArrow, BiSolidQuoteSingleLeft } from "react-icons/bi";
 import { BiSolidQuoteSingleRight } from "react-icons/bi";
 import { BiLeftArrow } from "react-icons/bi";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../Helpers/Helper";
 import { NavLink } from "react-router-dom";
 import pdf from "./images/cv.pdf";
@@ -26,16 +26,25 @@ function Home() {
   const { changeMode } = useContext(Context);
   const [numbers, setNumbers] = useState(0);
   const { chooseSection, setChooseSection } = useContext(Context);
-
+  const sectionref = useRef(null);
   useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (sectionref.current && sectionref.current.contains(event.target)) {
+        setChooseSection(false);
+      }
+    };
+
+    document.body.addEventListener("click", handleOutsideClick);
+
     const countNumbers = setInterval(() => {
       setNumbers((prevNumbers) => (prevNumbers >= 300 ? prevNumbers : prevNumbers + 1));
     }, 0.5); // Adjust the interval as needed (milliseconds)
 
     return () => {
       clearInterval(countNumbers);
+      document.body.removeEventListener("click", handleOutsideClick);
     };
-  }, []);
+  }, [setChooseSection]);
 
   return (
     <div className="flex flex-col lg:flex-row  justify-between gap-5 ">
